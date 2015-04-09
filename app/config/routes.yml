@@ -1,0 +1,194 @@
+    home:
+        url:  /
+        defaults: { controller: "Default:index" }
+
+    noRoute:
+        url:  /404
+        defaults: { controller: "Default:noRoute" }
+
+    sitemap:
+        url:  /sitemap
+        defaults: { controller: "Default:sitemap" }
+
+# member controller --------------------------
+    logout:
+        url:  /logout
+        defaults: { controller: "Membre:logout" }
+
+    account:
+        url:  /compte-client
+        defaults: { controller: "Membre:account" }
+
+    login:
+        url:  /login
+        defaults: { controller: "Membre:login" }
+
+    register:
+        url:  /inscription
+        defaults: { controller: "Membre:register" }
+
+    newsletter:
+        url:  /newsletter
+        defaults: { controller: "Membre:register"
+
+    reset_password:
+        url:  /mot-de-passe-perdu
+        defaults: { controller: "Membre:resetPassword" }
+
+
+# product controller --------------------------
+    comment_add:
+        url:  /salle-comment/{id}
+        defaults: { controller: "Avis:Add" }
+
+    product_show:
+        url:  /salle/{id}
+        defaults: { controller: "Produit:show" }
+
+    product_list:
+        url:  /reservation
+        defaults: { controller: "Produit:list" }
+
+    product_search:
+        url:  /recherche
+        defaults: { controller: "Produit:search" }
+
+# cart controller --------------------------
+    cart:
+        url:  /panier
+        defaults: { controller: "Cart:show" }
+
+    cart_add:
+        url:  /panier-ajout
+        defaults: { controller: "Cart:add" }
+
+    cart_remove:
+        url:  /panier-retirer/{id}
+        defaults: { controller: "Cart:remove" }
+
+    cart_add_promo:
+        url:  /panier-promo
+        defaults: { controller: "Cart:addPromotion" }
+
+    cart_delete_promo:
+        url:  /panier-x-promo/{id}
+        defaults: { controller: "Cart:removePromotion" }
+
+# Commande controller -------------------------
+    commande_new:
+        url:  /payment
+        defaults: { controller: "Commande:new" }
+
+# single pages / default controller --------------------------
+
+    cms_imprint:
+        url:  /mentions-legales
+        defaults: { controller: "Default:imprint" }
+
+    cms_terms:
+        url:  /conditions-generales
+        defaults: { controller: "Default:terms" }
+
+    contact:
+        url:  /contact
+        defaults: { controller: "Default:contact" }
+
+# Newsletter  --------------------------
+
+    newsletter_subscribe:
+        url:  /subscribe
+        defaults: { controller: "Newsletter:subscribe" }
+
+# Admin section  --------------------------
+
+    admin_home:
+        url:  /admin
+        defaults: { controller: "Admin:index" }
+#
+    admin_salles:
+        url:  /admin/salles
+        defaults: { controller: "Salle:salles" }
+
+    admin_salle_edit:
+        url:  /admin/salle/{id}
+        defaults: { controller: "Salle:salleEdit" }
+
+    admin_salle_create:
+        url:  /admin/salle-new
+        defaults: { controller: "Salle:salleCreate" }
+
+    admin_salle_delete:
+        url:  /admin/salle-delete/{id}
+        defaults: { controller: "Salle:delete" }
+#
+    admin_promotions:
+        url:  /admin/promotions
+        defaults: { controller: "Promotion:list" }
+
+    admin_promotion_create:
+        url:  /admin/promotion-new
+        defaults: { controller: "Promotion:create" }
+
+    admin_promotion_edit:
+        url:  /admin/promotion/{id}
+        defaults: { controller: "Promotion:edit" }
+
+    admin_promotion_delete:
+        url:  /admin/promotion-delete/{id}
+        defaults: { controller: "Promotion:delete" }
+#
+    admin_produits:
+        url:  /admin/produits
+        defaults: { controller: "Produit:adminList" }
+
+    admin_produit_create:
+        url:  /admin/produit-new
+        defaults: { controller: "Produit:create" }
+
+    admin_produit_edit:
+        url:  /admin/produit/{id}
+        defaults: { controller: "Produit:edit" }
+
+    admin_produit_delete:
+        url:  /admin/produit-delete/{id}
+        defaults: { controller: "Produit:delete" }
+#
+    admin_newsletter:
+        url:  /admin/newsletter
+        defaults: { controller: "Newsletter:create" }
+#
+    admin_avis:
+        url:  /admin/avis
+        defaults: { controller: "Avis:list" }
+
+    admin_avis_edit:
+        url:  /admin/avis/{id}
+        defaults: { controller: "Avis:edit" }
+
+    admin_avis_delete:
+        url:  /admin/avis-delete/{id}
+        defaults: { controller: "Avis:delete" }
+#
+    admin_membres:
+        url:  /admin/membres
+        defaults: { controller: "Membre:list" }
+
+    admin_membre_create_admin:
+        url:  /admin/membre-new-admin
+        defaults: { controller: "Membre:createAdmin" }
+
+    admin_membre_delete:
+        url:  /admin/membre-delete/{id}
+        defaults: { controller: "Membre:delete" }
+#
+    admin_commandes:
+        url:  /admin/commandes
+        defaults: { controller: "Commande:list" }
+
+    admin_commande_show:
+        url:  /admin/commande/{id}
+        defaults: { controller: "Commande:details" }
+#
+    admin_stats:
+        url:  /admin/statistics
+        defaults: { controller: "Admin:statistics" }
